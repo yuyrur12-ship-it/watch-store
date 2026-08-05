@@ -1,32 +1,7 @@
-const storeName = "Luxury Watch Store";
+// تغيير اسم المتجر تلقائياً
 
-document.addEventListener("DOMContentLoaded", () => {
-    const title = document.getElementById("store-name");
+const storeTitle = document.getElementById("storeName");
 
-    if(title){
-        title.textContent = storeName;
-    }
-});
-
-const langBtn = document.getElementById("lang-btn");
-
-if(langBtn){
-    langBtn.addEventListener("click", () => {
-
-        if(document.documentElement.lang === "ar"){
-
-            document.documentElement.lang = "en";
-            document.documentElement.dir = "ltr";
-
-            langBtn.textContent = "AR";
-
-        }else{
-
-            document.documentElement.lang = "ar";
-            document.documentElement.dir = "rtl";
-
-            langBtn.textContent = "EN";
-        }
-
-    });
+if (storeTitle && typeof STORE !== "undefined") {
+    storeTitle.textContent = STORE.name;
 }
